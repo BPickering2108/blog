@@ -59,8 +59,8 @@ paginate = 5
     title = "Pickering.Cloud Blog"
 
     [languages.en.params]
-      subtitle = "A simple, retro theme for Hugo"
-      owner = ""
+      subtitle = "Blog page for Pickering.Cloud"
+      owner = "Pickering.Cloud"
       keywords = ""
       copyright = ""
       menuMore = "Show more"
@@ -74,15 +74,11 @@ paginate = 5
       words = "words"
 
       [languages.en.params.logo]
-        logoText = "Terminal"
-        logoHomeLink = "/"
+        logoText = "Pickering.Cloud"
+        logoHomeLink = "https://www.pickering.cloud/wp-content/uploads/go-x/u/d498fd58-98ca-4870-bc1f-63750d24697b/image-240x240.png"
 
       [languages.en.menu]
         [[languages.en.menu.main]]
           identifier = "about"
           name = "About"
-          url = "/about"
-        [[languages.en.menu.main]]
-          identifier = "showcase"
-          name = "Showcase"
-          url = "/showcase"
+          url = "https://pickering.cloud"
