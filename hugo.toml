@@ -75,7 +75,7 @@ paginate = 5
 
       [languages.en.params.logo]
         logoText = "Pickering.Cloud"
-        logoHomeLink = "https://www.pickering.cloud/wp-content/uploads/go-x/u/d498fd58-98ca-4870-bc1f-63750d24697b/image-240x240.png"
+        logoHomeLink = "https://blog.pickering.cloud/"
 
       [languages.en.menu]
         [[languages.en.menu.main]]
