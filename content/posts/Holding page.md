@@ -1,12 +1,10 @@
 ---
-title: First test post
+title: Holding Page
 date: 2024-11-28
 draft: false
 tags:
   - Blog
 ---
-
-Example post
 
 <h2> Please wait </h2>
 
