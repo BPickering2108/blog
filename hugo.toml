@@ -82,3 +82,8 @@ paginate = 5
           identifier = "about"
           name = "About"
           url = "https://pickering.cloud"
+
+        [[languages.en.menu.main]]
+          identifier = "recognition"
+          name = "Recognition"
+          url = "/recognition"
