@@ -15,10 +15,10 @@
       <guid>/posts/testpost/</guid>
       <description>&lt;p&gt;Example post&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;!&lt;img alt=&#34;Image Description&#34; src=&#34;/images/Pasted%20image%2020241128204300.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;Webhook test&lt;/p&gt;</description>
       <content>&lt;p&gt;Example post&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;!&lt;img alt=&#34;Image Description&#34; src=&#34;/images/Pasted%20image%2020241128204300.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Webhook test&lt;/p&gt;
 </content>
     </item>
     
