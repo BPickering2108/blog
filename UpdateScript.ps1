@@ -35,6 +35,25 @@ foreach ($cmd in $requiredCommands) {
     }
 }
 
+# Check for BurntToast module
+$ProgPref = $ProgressPreference
+$ProgressPreference = "SilentlyContinue"
+$BTInstalled = Get-Module -ListAvailable -Name BurntToast -ErrorAction SilentlyContinue
+if($BTInstalled -eq $null){
+    Write-Host "Installing BurntToast module"
+    Install-Module BurntToast
+}
+else{
+    $BTCurrent = ((Get-Module -Name BurntToast -ListAvailable).Version | Sort-Object -Descending | Select-Object -First 1).ToString()
+    $BTNewest = (Find-Module -Name BurntToast).Version.ToString()
+    if($BTNewest -gt $BTCurrent){
+        Write-Host "Updating BurntToast module"
+        Update-Module BurntToast
+    }
+}
+$ProgressPreference = $ProgPref
+Import-Module BurntToast
+
 # Step 1: Check if Git is initialized, and initialize if necessary
 if (-not (Test-Path ".git")) {
     Write-Host "Initializing Git repository..."
@@ -152,4 +171,10 @@ try {
 # Delete the temporary branch
 git branch -D hostinger-deploy
 
-Write-Host "All done! Site synced, processed, committed, built, and deployed."
+$CompleteMessage = "All done! Site synced, processed, committed, built, and deployed."
+if($Error -eq $null){
+    New-BurntToastNotification -Text $CompleteMessage -Sound Default
+}
+else{
+    New-BurntToastNotification -Text $Error[0] -Sound Alarm1
+}
