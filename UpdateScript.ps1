@@ -174,7 +174,7 @@ try {
 git branch -D hostinger-deploy
 
 $CompleteMessage = "All done! Site synced, processed, committed, built, and deployed."
-if($Error.Count -gt 1){
+if($Error.Count -lt 1){
     New-BurntToastNotification -Text $CompleteMessage -Sound Default
 }
 else{
