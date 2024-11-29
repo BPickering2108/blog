@@ -41,14 +41,14 @@ $ProgressPreference = "SilentlyContinue"
 $BTInstalled = Get-Module -ListAvailable -Name BurntToast -ErrorAction SilentlyContinue
 if($BTInstalled -eq $null){
     Write-Host "Installing BurntToast module"
-    Install-Module BurntToast
+    Install-Module BurntToast -Force
 }
 else{
-    $BTCurrent = ((Get-Module -Name BurntToast -ListAvailable).Version | Sort-Object -Descending | Select-Object -First 1).ToString()
+    $BTCurrent = ($BTInstalled.Version | Sort-Object -Descending | Select-Object -First 1).ToString()
     $BTNewest = (Find-Module -Name BurntToast).Version.ToString()
-    if($BTNewest -gt $BTCurrent){
+    if([version]$BTNewest -gt [version]$BTCurrent){
         Write-Host "Updating BurntToast module"
-        Update-Module BurntToast
+        Update-Module BurntToast -Force
     }
 }
 $ProgressPreference = $ProgPref
@@ -172,9 +172,9 @@ try {
 git branch -D hostinger-deploy
 
 $CompleteMessage = "All done! Site synced, processed, committed, built, and deployed."
-if($Error -eq $null){
+if($Error.Count -eq 0){
     New-BurntToastNotification -Text $CompleteMessage -Sound Default
 }
 else{
-    New-BurntToastNotification -Text $Error[0] -Sound Alarm1
+    New-BurntToastNotification -Text $Error[0] -Sound Alarm
 }
