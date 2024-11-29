@@ -6,6 +6,6 @@ tags:
   - Blog
 ---
 
-<h2> Please wait </h2>
+<h2> 404 - Blog not found </h2>
 
 Site building is in progress - aiming to start weekly(ish) posts in the new year!
