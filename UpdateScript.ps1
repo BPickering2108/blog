@@ -1,4 +1,5 @@
 ﻿# PowerShell Script for Windows
+Import-Module PowerShellGet
 
 # Set variables for Obsidian to Hugo copy
 $sourcePath = "C:\Users\Bradley\OneDrive\My Documents\Obsidian\Bradley-Notes\BlogPosts"
