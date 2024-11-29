@@ -178,3 +178,4 @@ if($Error.Count -gt 1){
 else{
     New-BurntToastNotification -Text $Error[0] -Sound Alarm
 }
+pause
