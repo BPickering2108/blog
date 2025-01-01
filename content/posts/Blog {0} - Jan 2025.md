@@ -1,7 +1,7 @@
 ---
-title: Holding Page
+title: Blog {0} - Jan 2025
 date: 2025-01-01
-draft: true
+draft: false
 tags:
   - Blog
 ---
