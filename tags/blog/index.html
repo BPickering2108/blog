@@ -172,6 +172,40 @@
     
       <article class="post on-list">
         <h1 class="post-title">
+          <a href="/posts/blog-1---feb-2025/">Blog {0} - Jan 2025</a>
+        </h1>
+        <div class="post-meta"><time class="post-date">2025-02-10</time></div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="/tags/blog/">Blog</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+
+        <div class="post-content">
+          
+            <h2 id="conundrums">Conundrums</h2>
+<h4 id="what-day-is-it">What day is it?</h4>
+<p>I had the (un)lucky task of covering out of hours on call over New Years, and so was woken up at 03:00 on New Years Eve to encounter an issue where errors were streaming in from our FTP platform - most notably the process which transfers orders from the website into our warehouse management system (WMS). After some quick investigation, I noticed that the affected jobs looked to only be those communicating with our Azure Blob storages.
+After I had confirmed no changes to the environment from our side, the manager on call alerted the internal team who support our WMS and the external 3rd party who support our website. I then started investigating the start time of the errors - exactly midnight! At this point, a Microsoft support engineer was called in to advise and confirmed the hypothesis - the leap year had led to some confusion in the FTP system, and it was unable to authenticate with the provided credentials.
+Unfortunately, while the MS engineer was able to advise the suspected root cause (we were his 3rd customer just that morning), the advice was that the issue was with the FTP platform, not Azure.</p>
+          
+        </div>
+
+        
+          <div>
+            <a class="read-more button inline" href="/posts/blog-1---feb-2025/">Read more</a>
+          </div>
+        
+      </article>
+    
+      <article class="post on-list">
+        <h1 class="post-title">
           <a href="/posts/blog-0---jan-2025/">Blog {0} - Jan 2025</a>
         </h1>
         <div class="post-meta"><time class="post-date">2025-01-01</time></div>
