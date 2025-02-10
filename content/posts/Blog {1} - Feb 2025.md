@@ -1,5 +1,5 @@
 ---
-title: Blog {0} - Jan 2025
+title: Blog {1} - Feb 2025
 date: 2025-02-10
 draft: false
 tags:
